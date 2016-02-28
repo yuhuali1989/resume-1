@@ -60,8 +60,8 @@
 			background: url('images/overlay.png');
 			z-index: -1;
 		}
-	
-	
+
+
 	.icon
 	{
 		text-decoration: none;
@@ -99,14 +99,14 @@
 		more (including icons for many other accounts and services).
 		To add them to Astral, go here to look up the unicode for
 		the icon you want to use:
-		
+
 		http://kudakurage.com/ligature_symbols/
-	
+
 		Then simply add the CSS for it in this format:
-		
+
 		.icon-(name):before		{ content: '(unicode)'; }
 	*/
-	
+
 	@font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
@@ -182,15 +182,15 @@ you can use the generic selector below, but it's slower:
 }
 
 
-		
+
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
-	
+
 	#nav
 	{
 	}
-	
+
 		#nav a
 		{
 			position: relative;
@@ -205,7 +205,7 @@ you can use the generic selector below, but it's slower:
 			{
 				padding-right: 0;
 			}
-		
+
 /*********************************************************************************/
 /* Panels                                                                        */
 /*********************************************************************************/
@@ -222,8 +222,8 @@ you can use the generic selector below, but it's slower:
 	}
 
 
-	
-		
+
+
 
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
@@ -376,7 +376,7 @@ a:hover {
 
 
 
-.bl-content, 
+.bl-content,
 div.bl-panel-items > div > div {
 	opacity: 0;
 	pointer-events: none;
@@ -422,7 +422,7 @@ div.bl-panel-items > div > div {
 	list-style: none;
 	padding: 0;
 	margin-bottom: 20px;
-} 
+}
 
 #work  div  > ul li {
 	display: inline-block;
@@ -687,7 +687,7 @@ h3{
 		background-repeat:repeat-x;
 		overflow:hidden;
 		background-color:#fdd42f;
-		font-family: 'Open Sans', Arial;		
+		font-family: 'Open Sans', Arial;
 	}
 	/* About */
 	.about {
@@ -695,6 +695,7 @@ h3{
 		width:470px;
 	}
 	.about .photo-inner {
+		margin-top:20px;
 		float:left;
 		background:url(../images/photo-inner.png) no-repeat;
 		width:192px;
@@ -718,9 +719,9 @@ h3{
 	}
 	.about p {
 		font-size:14px;
-		margin-top:15px;
+		margin-top:1px;
 		color:#bc9010;
-		line-height:20px;
+		line-height:14px;
 	}
 	.inner_copyright{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 	/* Personal info */
@@ -733,7 +734,7 @@ h3{
 		padding:20px 0 0 20px;
 	}
 	.personal-info li {
-		font-size:14px;
+		font-size:18px;
 		margin-bottom:10px;
 		overflow: hidden;
 	}
@@ -742,14 +743,14 @@ h3{
 		color:#a87f09;
 		background-color:#f4c024;
 		float:left;
-		padding:4px 7px;
+		/*padding:4px 7px;*/
 		border-radius: 3px;
 		-moz-border-radius: 3px;
 		-webkit-border-radius: 3px;
 	}
 	.personal-info li span {
 		float:right;
-		width:170px;
+		width:200px;
 		color:#a87f09;
 	}
 
@@ -802,7 +803,7 @@ h3{
     transform: scale(1.08);
     transform-origin: 50% 50%;
 }
-		
+
 .time-line-href {
     position: relative;
     top: 1px;
@@ -817,7 +818,7 @@ h3{
     background:#000;
     color:#000;
 }
-    
+
 .time-line-href span {
     position:relative;
     top:-42px;
@@ -862,7 +863,7 @@ h3{
     top: 260px;
     padding: 30px 20px 30px 20px;
 }
-        
+
 #timeline-outputtext span {
     color: #4B6EB2;
     text-transform: uppercase;
@@ -885,11 +886,11 @@ h3{
     text-align: justify;
     float: left;
 }
-    
+
 .timeline-container {
 	width:830px;
 }
-    
+
 #timeline-line {
 	width:800px;
 }
@@ -898,7 +899,7 @@ h3{
     left: -275px;
 
 }
-	
+
 .href1 .circleLine{
 	opacity:1;
 }.timeline-circle1change1 {
@@ -1315,7 +1316,7 @@ margin-left:20px;
 /** @group personal settings **/
 #more #info { float: left; margin-bottom: 12px; }
 #more #photo { float: right; }
-#more #photo img { 
+#more #photo img {
 -webkit-border-radius: 3px;
 -moz-border-radius: 3px;
 border-radius: 3px;
@@ -1324,7 +1325,7 @@ border-radius: 3px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 background-color: #fff;
 border: 1px solid #ccc;
-padding: 5px; 
+padding: 5px;
 }
 
 /** @group skills **/
@@ -1334,6 +1335,6 @@ padding: 5px;
 /** @group clearfix **/
 #more .clearfix2:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 #more .clearfix2 { display: inline-block; }
- 
+
 #more .clearfix2 { display: block; }
 #more .clearfix { height: 1%; }

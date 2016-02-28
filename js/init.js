@@ -1,5 +1,5 @@
 /*
-	Astral 1.0 
+	Astral 1.0
 */
 
 _5grid.ready(function() {
@@ -9,8 +9,8 @@ _5grid.ready(function() {
 	/*********************************************************************************/
 
 		var settings = {
-			resizeSpeed:	600,		// Speed to resize panel
-			fadeSpeed:		300,		// Speed to fade in/out
+			resizeSpeed:	100,		// Speed to resize panel
+			fadeSpeed:		50,		// Speed to fade in/out
 			sizeFactor:		11.5,		// Size factor
 			sizeLimit:		15			// Minimum point size
 		};
@@ -28,20 +28,20 @@ _5grid.ready(function() {
 			_wrapper = jQuery('#wrapper'),
 			_nav = jQuery('#nav'), _nav_links = _nav.find('a'),
 			_jumplinks = jQuery('.jumplink');
-			
+
 		var	panels = [],
 			activePanelId = null,
 			firstPanelId = null,
 			isLocked = false,
 			isTouch = !!('ontouchstart' in window);
-		
+
 		if (isTouch)
 		{
 			settings.fadeSpeed = 0;
 			settings.resizeSpeed = 0;
 			_nav_links.find('span').remove();
 		}
-		
+
 	/*********************************************************************************/
 	/* Main (Desktop)                                                                */
 	/*********************************************************************************/
@@ -62,13 +62,13 @@ _5grid.ready(function() {
 					else
 						_wrapper.css('padding-top', (((_window.height() - panels[firstPanelId].height()) / 2) - _nav.height()) + 'px');
 				};
-				
+
 			// Panels
 				_panels.each(function(i) {
 					var t = jQuery(this), id = t.attr('id');
-					
+
 					panels[id] = t;
-				
+
 					if (i == 0)
 					{
 						firstPanelId = id;
@@ -76,9 +76,9 @@ _5grid.ready(function() {
 					}
 					else
 						t.hide();
-						
+
 					t.h5u_activate = function() {
-					
+
 						// Check lock state and determine whether we're already at the target
 							if (isLocked
 							||	activePanelId == id)
@@ -86,7 +86,7 @@ _5grid.ready(function() {
 
 						// Lock
 							isLocked = true;
-							
+
 						// Change nav link (if it exists)
 							_nav_links.removeClass('active');
 							_nav_links.filter('[href="#' + id + '"]').addClass('active');
@@ -96,16 +96,16 @@ _5grid.ready(function() {
 									panels[id].outerHeight() +
 									_nav.outerHeight() +
 									_footer.outerHeight();
-						
+
 							if (x > _window.height())
 								_wrapper.addClass('tall');
 							else
 								_wrapper.removeClass('tall');
-									
+
 						// Fade out active panel
 							_footer.fadeTo(settings.fadeSpeed, 0.0001);
 							panels[activePanelId].fadeOut(settings.fadeSpeed, function() {
-			
+
 								// Set new active
 									activePanelId = id;
 
@@ -116,43 +116,43 @@ _5grid.ready(function() {
 
 									// Reposition
 										_body.h5u_reposition();
-										
+
 									// Resize main to height of new panel
 										_main.animate({
 											height: panels[activePanelId].outerHeight()
 										}, settings.resizeSpeed, 'swing', function() {
-										
+
 											// Fade in new active panel
 												_footer.fadeTo(settings.fadeSpeed, 1.0);
 												panels[activePanelId].fadeIn(settings.fadeSpeed, function() {
-													
+
 													// Unlock
 														isLocked = false;
 
 												});
 										});
-									
+
 							});
-					
+
 					};
 				});
 
 			// Nav + Jumplinks
 				_nav_links.add(_jumplinks).click(function(e) {
 					var t = jQuery(this), href = t.attr('href'), id;
-				
+
 					if (href.substring(0,1) == '#')
 					{
 						e.preventDefault();
 						e.stopPropagation();
 
 						id = href.substring(1);
-						
+
 						if (id in panels)
 							panels[id].h5u_activate();
 					}
 				});
-			
+
 			// Window
 				_window
 					.resize(function() {
@@ -171,7 +171,5 @@ _5grid.ready(function() {
 				_wrapper
 					.fadeTo(400, 1.0);
 		}
-	
+
 }, true);
-
-

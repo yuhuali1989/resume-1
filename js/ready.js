@@ -1,11 +1,11 @@
 $(document).ready(function() {
- /** 
+ /**
 * clock ready
 
  */
 
-					$('#fancyClock').tzineClock();   
- /** 
+					$('#fancyClock').tzineClock();
+ /**
 * music ready
 
  */
@@ -15,9 +15,9 @@ $(document).ready(function() {
 				cssSelectorAncestor : "#jp_container_1"
 			},
 			[{
-				title : "ÁÜÓêÒ»Ö±×ß",
-				artist : "ÕÅÉØº­",
-				m4v : "video/walk_in_rain.mp4",
+				title : "ï¿½ï¿½ï¿½ï¿½Ò»Ö±ï¿½ï¿½",
+				artist : "ï¿½ï¿½ï¿½Øºï¿½",
+				// m4v : "video/walk_in_rain.mp4",
 
 			},
 			{
@@ -34,7 +34,7 @@ $(document).ready(function() {
 				title : "The Other Side",
 				artist : " Kurt Schneider & Jason Derulo & Keke Palmer & Max Schneider",
 				m4v : "video/The_Other_Side.mp4",
-			} ], 
+			} ],
 			{
 				swfPath : "js",
 				supplied : "webmv,m4v",
@@ -43,7 +43,7 @@ $(document).ready(function() {
 				audioFullScreen : true
 			});
 
- /** 
+ /**
 * scoll-bar ready
 
  */
@@ -53,11 +53,11 @@ $(document).ready(function() {
 			$('body').perfectScrollbar();
 			$("body").scrollLeft(300);
 			$("body").perfectScrollbar('update');
-					
- /** 
+
+ /**
 * time-line ready
 
- */					
+ */
 					$('body').css('overflow-x', 'hidden');
 					var con = $('.timeline-container');
 					var position = con.position();
