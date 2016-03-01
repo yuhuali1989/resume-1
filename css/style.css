@@ -1242,10 +1242,10 @@ h3{
 
 .column {
 	float: left;
-	width:45%;
+	width:90%;
 	min-height: 300px;
 	position: relative;
-	text-align: right;
+	text-align: left;
 }
 .word{
 	padding-left: 2em;
