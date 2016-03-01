@@ -24,9 +24,7 @@
 <link href="css/jplayer.pink.flag.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.tzineClock.css" />
 <link href="css/perfect-scrollbar.css" rel="stylesheet" media="screen,projection">
-<!-- <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" /> -->
 <link rel="shortcut icon" href="http://xskx.suda.edu.cn/resume/favicon.ico">
-<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 </head>
 <body class="homepage">
 
@@ -35,16 +33,89 @@
 
 		<!-- Nav -->
 		<nav id="nav">
-			<a href="#less" class="icon icon-user active"><span>简历概况</span></a>
-			<a href="#more" class="icon icon-user-2"><span>简历详情</span></a>
+			<a href="#more" class="icon icon-user active"><span>简历详情</span></a>
+			<a href="#less" class="icon icon-user-2"><span>简历概况</span></a>
 			<a href="#time" class="icon icon-clock"><span>时钟</span></a>
-			<!--<a href="#music" class="icon icon-headphones"><span>音乐</span></a> -->
-		<!--	<a href="http://github.com/allengzh/" target="_blabk" class="icon icon-github"><span>github</span></a>-->
 		</nav>
 
 		<!-- Main -->
 		<div id="main">
 
+
+
+			<!-- more resume -->
+			<article id="more" class="panel">
+				<div id="w" itemscope="" itemtype="http://schema.org/Person">
+					<header>
+						<div class="clearfix2">
+							<div id="info">
+								<h1>
+									<span itemprop="name">Yu Huali</span>
+								</h1>
+								<h3>
+									<span itemprop="jobTitle">Senior Big Data Engineer</span>
+								</h3>
+								<small itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+									<span itemprop="addressLocality">Haidian</span>,
+									<span itemprop="addressRegion">Beijing</span>,
+									<span itemprop="addressCountry">China</span>
+								</small>
+								<small><span itemprop="email">1027576986@qq.com</span></small>
+								<!-- <small>
+									<a href="http://github.com/yuhuali1989/" itemprop="url" target="_blabk">GitHub</a> •
+									<a href="http://github.com/yuhuali1989" itemprop="url" target="_blabk">@yuhuali1989</a>
+								</small> -->
+							</div>
+
+							<div id="photo">
+								<img src="images/yu.png"
+									alt="Jake Rocheleau resume photo avatar" itemprop="image">
+							</div>
+						</div>
+
+						<section id="introduce">
+							<h2>Intruduction</h2>
+							<p itemprop="description">高级大数据工程师，复旦大学数学与应用数学专业。熟悉aws、小米云等云计算各种技术的搭配使用</p>
+							<p itemprop="description">使用hadoop,mapreduce大数据分析框架系统进行离线日志分析；
+																				使用spark进行数据挖掘、机器学习算法；
+																				使用storm进行流式计算，实现大规模数据实时计算；</p>
+							<p itemprop="description">掌握java,shell编程，并且提供数据服务api，深入了解android ios客户端开发。</p>
+
+						</section>
+
+
+
+						<section id="experience">
+							<h2>Project Experience</h2>
+							<p>日志数据清洗，运营报表开发：开发mapreduce代码，清洗／计算数据；shell＋hive sql代码计算数据；spring mvc数据产品服务</p>
+							<p>日志收集系统开发：logstash收集机器的日志数据，pull到aws s3上，起mapreduce任务清洗，通过hue进行日志查询</p>
+							<p>小米手环数据融合：用户上传的数据，写到小米emq，storm spout订阅emq数据，bolt处理数据融合和调用c＋＋算法包，
+								并将最终结果写入到小米sds／aws dynamodb；融合后数据，提供服务（spring boot）</p>
+							<p>米动指数：通过小米手环的大数据，进行用户的运动、健康状态和用户水平对比的计算和服务提供</p>
+
+							<h2>Work Experience</h2>
+							<p>搜房网，数据分析师</p>
+							<p>去哪儿网，大数据开发工程师</p>
+							<p>小米手环，高级大数据工程师</p>
+						</section>
+						<section id="skills" class="clearfix" itemscope=""
+							itemtype="http://schema.org/ItemList">
+							<h2 itemprop="name">Skillset</h2>
+							<section id="skills-left">
+								<h4 itemprop="about">Development</h4>
+								<ul>
+									<li itemprop="itemListElement">Java</li>
+									<li itemprop="itemListElement">Shell</li>
+									<li itemprop="itemListElement">Spring mvc/Spring boot</li>
+									<li itemprop="itemListElement">hadoop、storm、spark</li>
+								</ul>
+							</section>
+						</section>
+					</header>
+
+				</div>
+			</article>
+			<!-- /more resume -->
 			<!-- less resume -->
 			<article id="less" class="panel">
 				<div id="bl-main" class="bl-main">
@@ -158,11 +229,10 @@
 								<h2>履历</h2>
 								<div class="clearfix">
 									<div class="column cup">
-										<button>复旦大学，数学与应用数学 ~ 2008-2012</button>
-										<button>塞惟咨询，数据分析 ~ 2012.7-2013.5</button>
-										<button>搜房网，数据分析师 ~ 2013.6-2014.7</button>
-										<button>去哪儿网，大数据开发工程师 ~ 2014.7-2015.6</button>
-										<button>小米手环，高级大数据工程师 ~ 2015.7－至今</button>
+										<button>复旦大学，数学与应用数学</button>
+										<button>搜房网，数据分析师</button>
+										<button>去哪儿网，大数据开发工程师</button>
+										<button>小米手环，高级大数据工程师</button>
 									</div>
 
 
@@ -197,83 +267,6 @@
 				</div>
 			</article>
 			<!-- /less resume -->
-
-			<!-- more resume -->
-			<article id="more" class="panel">
-				<div id="w" itemscope="" itemtype="http://schema.org/Person">
-					<header>
-						<div class="clearfix2">
-							<div id="info">
-								<h1>
-									<span itemprop="name">Yu Huali</span>
-								</h1>
-								<h3>
-									<span itemprop="jobTitle">Senior Big Data Engineer</span>
-								</h3>
-								<small itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-									<span itemprop="addressLocality">Haidian</span>,
-									<span itemprop="addressRegion">Beijing</span>,
-									<span itemprop="addressCountry">China</span>
-								</small>
-								<small><span itemprop="email">1027576986@qq.com</span></small>
-								<!-- <small>
-									<a href="http://github.com/yuhuali1989/" itemprop="url" target="_blabk">GitHub</a> •
-									<a href="http://github.com/yuhuali1989" itemprop="url" target="_blabk">@yuhuali1989</a>
-								</small> -->
-							</div>
-
-							<div id="photo">
-								<img src="images/yu.png"
-									alt="Jake Rocheleau resume photo avatar" itemprop="image">
-							</div>
-						</div>
-
-						<section id="introduce">
-							<h2>Intruduction</h2>
-							<p itemprop="description">高级大数据工程师，复旦大学数学与应用数学专业。熟悉aws、小米云等云计算各种技术的搭配使用</p>
-							<p itemprop="description">使用hadoop,mapreduce大数据分析框架系统进行离线日志分析；
-																				使用spark进行数据挖掘、机器学习算法；
-																				使用storm进行流式计算，实现大规模数据实时计算；</p>
-							<p itemprop="description">掌握java,shell编程，并且提供数据服务api，深入了解android ios客户端开发。</p>
-
-						</section>
-
-
-
-						<section id="experience">
-							<h2>Work Experience</h2>
-							<p>复旦大学，数学与应用数学 ~ 2008-2012</p>
-							<p>塞惟咨询，数据分析 ~ 2012.7-2013.5</p>
-							<p>搜房网，数据分析师 ~ 2013.6-2014.7</p>
-							<p>去哪儿网，大数据开发工程师 ~ 2014.7-2015.6</p>
-							<p>小米手环，高级大数据工程师 ~ 2015.7－至今</p>
-
-							<h2>Project Experience</h2>
-							<p>日志数据清洗，运营报表开发：开发mapreduce代码，清洗／计算数据；shell＋hive sql代码计算数据；spring mvc数据产品服务</p>
-							<p>日志收集系统开发：logstash收集机器的日志数据，pull到aws s3上，起mapreduce任务清洗，通过hue进行日志查询</p>
-							<p>小米手环数据融合：用户上传的数据，写到小米emq，storm spout订阅emq数据，bolt处理数据融合和调用c＋＋算法包，
-								并将最终结果写入到小米sds／aws dynamodb；融合后数据，提供服务（spring boot）</p>
-							<p>米动指数：通过小米手环的大数据，进行用户的运动、健康状态和用户水平对比的计算和服务提供</p>
-						</section>
-						<section id="skills" class="clearfix" itemscope=""
-							itemtype="http://schema.org/ItemList">
-							<h2 itemprop="name">Skillset</h2>
-							<section id="skills-left">
-								<h4 itemprop="about">Development</h4>
-								<ul>
-									<li itemprop="itemListElement">Java</li>
-									<li itemprop="itemListElement">Shell</li>
-									<li itemprop="itemListElement">Spring mvc/Spring boot</li>
-									<li itemprop="itemListElement">hadoop、storm、spark</li>
-								</ul>
-							</section>
-						</section>
-					</header>
-
-				</div>
-			</article>
-			<!-- /more resume -->
-
 			<!-- Music -->
 			<article id="music" class="panel">
 				<header>
