@@ -100,7 +100,7 @@
                         <h2>Project Experience</h2>
                         <p>米动指数：设计基于spark streaming实时计算框架，使用message queue＋spark
                             streaming＋redis＋dynamodb＋jersey；
-                            通过小米手环的大数据，实时计算用户的运动、健康状态、水平对比，并提供web服务</p>
+                            通过小米手环的大数据，实时计算用户的运动、健康状态、水平对比，并提供web服务,在小米运动app已经上线服务</p>
                         <p>小米手环数据融合：设计实时计算框架，用户上传的运动原始数据，写到小米emq，storm
                             spout读取emq数据，bolt处理数据融合和调用c++算法包，
                             并将最终结果写入到小米sds／aws dynamodb；融合后数据，提供web服务（使用spring boot）</p>
@@ -108,6 +108,9 @@
                             mvc数据产品web服务</p>
                         <p>日志收集系统设计开发：logstash收集机器的日志数据，上传文件到aws
                             s3上，开发mapreduce任务清洗，通过hue／hive进行日志查询</p>
+                        <p>统计服务：spark streaming 实时计算，+ aws kinesis(消息队列) + aws s3（文件存储服务）+aws dynamodb(nosql) + jersey 服务，设计开发账号注册，实时数据计算；</p>
+                        <p>短链接服务：公司基础服务，为各部门提供短链接服务 </p>
+                           
 
                         <h2>Recent Work Experience</h2>
                         <p>去哪儿网，大数据开发工程师</p>
